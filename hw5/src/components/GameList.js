@@ -1,8 +1,10 @@
 import React from 'react';
-import { ScrollView, Image } from 'react-native';
+import { ScrollView, Image, Dimensions } from 'react-native';
+const deviceWidth = Dimensions.get('window').width;
 
 const GameList = (props) => {
   const { containerStyle, imageStyle } =styles;
+
   return(
     <ScrollView contentContainerStyle={containerStyle}>
       <Image style={imageStyle} source={require('../Asset/img_leagueoflegends.png')}/>
@@ -27,8 +29,8 @@ const styles = {
     paddingTop: 5,
   },
   imageStyle: {
-    height: 180,
-    width: 180,
+    height: (deviceWidth-15)/2,
+    width: (deviceWidth-15)/2,
     marginBottom: 5,
   },
 };

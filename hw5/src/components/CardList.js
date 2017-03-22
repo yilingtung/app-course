@@ -2,17 +2,17 @@ import React from 'react';
 import { ScrollView, View, Image } from 'react-native';
 
 const CardList = (props) => {
-  const { containerStyle, viewStyle, imageStyle } =styles;
+  const { containerStyle, viewStyle, imageStyle1, imageStyle2 } =styles;
   return(
     <ScrollView style={containerStyle}>
       <View style={viewStyle}>
-        <Image style={imageStyle} source={require('../Asset/img_firebat.png')}/>
+        <Image style={imageStyle1} source={require('../Asset/img_firebat.png')}/>
       </View>
       <View style={viewStyle}>
-        <Image style={imageStyle} source={require('../Asset/img_forsen.png')}/>
+        <Image style={imageStyle1} source={require('../Asset/img_forsen.png')}/>
       </View>
       <View style={viewStyle}>
-        <Image style={imageStyle} source={require('../Asset/img_kolento.png')}/>
+        <Image style={imageStyle2} source={require('../Asset/img_kolento.png')}/>
       </View>
     </ScrollView>
 
@@ -30,8 +30,13 @@ const styles = {
     paddingBottom: 5,
     flex: 1,
   },
-  imageStyle: {
-    flex: 1,
+  imageStyle1: {
+    width: 365,
+    height: 200,
+  },
+  imageStyle2: {
+    width: 365,
+    height: 144,
   },
 };
 
