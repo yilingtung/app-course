@@ -1,18 +1,28 @@
-import React from 'react';
-import { Text, View, Image } from 'react-native';
-
-const SearchBar = (props) => {
-  const { viewStyle, imageStyle, textStyle, searchBGStyle, seachStyle } =styles;
-  return(
-    <View style={viewStyle}>
-      <View style={searchBGStyle}>
-        <Image style={seachStyle} source={require('../Asset/icon_search.png')}/>
-        <Text style={textStyle}>Search</Text>
+import React, { Component } from 'react';
+import { Text, View, Image, TextInput } from 'react-native';
+class SearchBar extends Component{
+  constructor(props){
+    super(props);
+    this.state = {searchText : ''};
+  }
+  render(){
+    return(
+      <View style={styles.viewStyle}>
+        <View style={styles.searchBGStyle}>
+          <Image style={styles.seachStyle} source={require('../Asset/icon_search.png')}/>
+          <TextInput
+            style={styles.textInputStyle}
+            onChangeText={(text) => this.setState({searchText : text})}
+            value={this.state.searchText}
+            placeholder={'Search'}
+            placeholderTextColor={'rgb(185,163,227)'}
+          />
+        </View>
+        <Image style={styles.imageStyle} source={require('../Asset/btn_cast.png')}/>
       </View>
-      <Image style={imageStyle} source={require('../Asset/btn_cast.png')}/>
-    </View>
-  );
-};
+    )
+  }
+}
 
 const styles = {
   viewStyle: {
@@ -39,10 +49,11 @@ const styles = {
     marginLeft: 8.5,
     marginRight: 5.5,
   },
-  textStyle: {
-    marginTop: 5,
-    fontSize: 15,
+  textInputStyle: {
     color: 'rgb(185,163,227)',
+    fontSize: 15,
+    height: 30,
+    flex: 1,
   },
   imageStyle: {
     height: 33,
