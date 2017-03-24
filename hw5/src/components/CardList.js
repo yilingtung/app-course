@@ -2,17 +2,16 @@ import React from 'react';
 import { ScrollView, View, Image } from 'react-native';
 
 const CardList = (props) => {
-  const { containerStyle, viewStyle, imageStyle1, imageStyle2 } =styles;
   return(
-    <ScrollView style={containerStyle}>
-      <View style={viewStyle}>
-        <Image style={imageStyle1} source={require('../Asset/img_firebat.png')}/>
+    <ScrollView style={styles.containerStyle}>
+      <View style={styles.viewStyle}>
+        <Image style={styles.imageStyle1} source={require('../Asset/img_firebat.png')}/>
       </View>
-      <View style={viewStyle}>
-        <Image style={imageStyle1} source={require('../Asset/img_forsen.png')}/>
+      <View style={styles.viewStyle}>
+        <Image style={styles.imageStyle1} source={require('../Asset/img_forsen.png')}/>
       </View>
-      <View style={viewStyle}>
-        <Image style={imageStyle2} source={require('../Asset/img_kolento.png')}/>
+      <View style={styles.viewStyle}>
+        <Image style={styles.imageStyle2} source={require('../Asset/img_kolento.png')}/>
       </View>
     </ScrollView>
 

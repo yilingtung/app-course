@@ -5,8 +5,12 @@ import { AppRegistry } from 'react-native';
 //import Page from './page2';
 import Page from './page3';
 
-const App = () => {
-  <Page />
-};
+export default class App extends Component {
+  render() {
+    return (
+      <Page />
+    );
+  }
+}
 
-AppRegistry.registerComponent('App', () => App);
+AppRegistry.registerComponent('hw5', () => App);

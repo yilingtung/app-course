@@ -2,23 +2,18 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet,StatusBar, View, Image } from 'react-native';
 
-export default class hw5 extends Component {
+class Page1 extends Component {
   render() {
-    const {
-      containerStyle,
-      logoStyle,
-    } = styles;
-
     return (
-      <View style={containerStyle}>
+      <View style={styles.containerStyle}>
         <StatusBar hidden={true} barStyle="light-content"/>
-        <Image style={logoStyle} source={require('./src/Asset/logo_twitch.png')}/>
+        <Image style={styles.logoStyle} source={require('./src/Asset/logo_twitch.png')}/>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   containerStyle: {
     flex: 1,
     justifyContent: 'center',
@@ -29,6 +24,6 @@ const styles = StyleSheet.create({
     width: 210,
     height: 100,
   },
-});
+}
 
-AppRegistry.registerComponent('hw5', () => hw5);
+export default Page1;

@@ -5,16 +5,14 @@ import SearchBar from './src/components/SearchBar';
 import GameList from './src/components/GameList';
 import TabBar from './src/components/TabBar';
 
-export default class hw5 extends Component {
+class Page3 extends Component {
   render() {
-    const { containerStyle, tabBarStyle } = styles;
-
     return (
-      <View style={containerStyle}>
+      <View style={styles.containerStyle}>
       <StatusBar barStyle="light-content"/>
         <SearchBar />
         <GameList />
-        <TabBar style={tabBarStyle}/>
+        <TabBar style={styles.tabBarStyle}/>
       </View>
     );
   }
@@ -28,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('hw5', () => hw5);
+export default Page3;

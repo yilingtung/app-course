@@ -2,12 +2,11 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 
 const Header = (props) => {
-  const { viewStyle, imageStyle, textStyle } =styles;
   return(
-    <View style={viewStyle}>
-      <Image style={imageStyle} source={require('../Asset/btn_back.png')}/>
-      <Text style={textStyle}>{props.headerText}</Text>
-      <Image style={imageStyle} source={require('../Asset/btn_like.png')}/>
+    <View style={styles.viewStyle}>
+      <Image style={styles.imageStyle} source={require('../Asset/btn_back.png')}/>
+      <Text style={styles.textStyle}>{props.headerText}</Text>
+      <Image style={styles.imageStyle} source={require('../Asset/btn_like.png')}/>
     </View>
   );
 };

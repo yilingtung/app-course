@@ -3,18 +3,17 @@ import { ScrollView, Image, Dimensions } from 'react-native';
 const deviceWidth = Dimensions.get('window').width;
 
 const GameList = (props) => {
-  const { containerStyle, imageStyle } =styles;
 
   return(
-    <ScrollView contentContainerStyle={containerStyle}>
-      <Image style={imageStyle} source={require('../Asset/img_leagueoflegends.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_counterstrike.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_hearthstone.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_dota2.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_h1z1.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_destiny.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_leagueoflegends.png')}/>
-      <Image style={imageStyle} source={require('../Asset/img_counterstrike.png')}/>
+    <ScrollView contentContainerStyle={styles.containerStyle}>
+      <Image style={styles.imageStyle} source={require('../Asset/img_leagueoflegends.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_counterstrike.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_hearthstone.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_dota2.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_h1z1.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_destiny.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_leagueoflegends.png')}/>
+      <Image style={styles.imageStyle} source={require('../Asset/img_counterstrike.png')}/>
     </ScrollView>
   );
 };

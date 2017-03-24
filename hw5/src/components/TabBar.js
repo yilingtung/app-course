@@ -2,27 +2,26 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 
 const TabBar = (props) => {
-  const { containerStyle, lineStyle, viewStyle, imageStyle, textStyle, activeStyle, indicatorStyle } =styles;
   return(
     <View>
-      <View style={lineStyle}>
+      <View style={styles.lineStyle}>
       </View>
-      <View style={containerStyle}>
-        <View style={viewStyle}>
-          <Image style={imageStyle} source={require('../Asset/btn_games_selected.png')}/>
-          <Text style={activeStyle}>Games</Text>
+      <View style={styles.containerStyle}>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle} source={require('../Asset/btn_games_selected.png')}/>
+          <Text style={styles.activeStyle}>Games</Text>
         </View>
-        <View style={viewStyle}>
-          <Image style={imageStyle} source={require('../Asset/btn_channels.png')}/>
-          <Text style={textStyle}>Channels</Text>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle} source={require('../Asset/btn_channels.png')}/>
+          <Text style={styles.textStyle}>Channels</Text>
         </View>
-        <View style={viewStyle}>
-          <Image style={imageStyle} source={require('../Asset/btn_following.png')}/>
-          <Text style={textStyle}>Following</Text>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle} source={require('../Asset/btn_following.png')}/>
+          <Text style={styles.textStyle}>Following</Text>
         </View>
-        <View style={viewStyle}>
-          <Image style={imageStyle} source={require('../Asset/btn_me.png')}/>
-          <Text style={textStyle}>Me</Text>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle} source={require('../Asset/btn_me.png')}/>
+          <Text style={styles.textStyle}>Me</Text>
         </View>
       </View>
     </View>

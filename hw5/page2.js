@@ -6,17 +6,15 @@ import SegmentedControl from './src/components/SegmentedControl';
 import CardList from './src/components/CardList';
 import TabBar from './src/components/TabBar';
 
-export default class hw5 extends Component {
+class Page2 extends Component {
   render() {
-    const { containerStyle, tabBarStyle } = styles;
-
     return (
-      <View style={containerStyle}>
+      <View style={styles.containerStyle}>
         <StatusBar barStyle="light-content"/>
         <Header headerText={'Hearthstone'} />
         <SegmentedControl />
         <CardList />
-        <TabBar style={tabBarStyle}/>
+        <TabBar style={styles.tabBarStyle}/>
       </View>
     );
   }
@@ -30,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('hw5', () => hw5);
+export default Page2;

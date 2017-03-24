@@ -2,16 +2,15 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 
 const SegmentedControl = (props) => {
-  const { containerStyle,viewStyle, imageStyle, textStyle, activeStyle, indicatorStyle } =styles;
   return(
-    <View style={containerStyle}>
-      <View style={viewStyle}>
-        <Text style={textStyle, activeStyle}>LIVE</Text>
-        <View style={indicatorStyle}>
+    <View style={styles.containerStyle}>
+      <View style={styles.viewStyle}>
+        <Text style={styles.textStyle, styles.activeStyle}>LIVE</Text>
+        <View style={styles.indicatorStyle}>
         </View>
       </View>
-      <View style={viewStyle}>
-        <Text style={textStyle}>RECENT</Text>
+      <View style={styles.viewStyle}>
+        <Text style={styles.textStyle}>RECENT</Text>
       </View>
     </View>
 
