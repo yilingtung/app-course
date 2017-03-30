@@ -1,20 +1,23 @@
 import React from 'react';
 import { ScrollView, View, Image } from 'react-native';
+import HeaderTab from './HeaderTab';
 
 const CardList = (props) => {
   return(
-    <ScrollView style={styles.containerStyle}>
-      <View style={styles.viewStyle}>
-        <Image style={styles.imageStyle1} source={require('../Asset/img_firebat.png')}/>
-      </View>
-      <View style={styles.viewStyle}>
-        <Image style={styles.imageStyle1} source={require('../Asset/img_forsen.png')}/>
-      </View>
-      <View style={styles.viewStyle}>
-        <Image style={styles.imageStyle2} source={require('../Asset/img_kolento.png')}/>
-      </View>
-    </ScrollView>
-
+    <View style={{flex:1}}>
+      <HeaderTab />
+      <ScrollView style={styles.containerStyle}>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle1} source={require('../Asset/img_firebat.png')}/>
+        </View>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle1} source={require('../Asset/img_forsen.png')}/>
+        </View>
+        <View style={styles.viewStyle}>
+          <Image style={styles.imageStyle2} source={require('../Asset/img_kolento.png')}/>
+        </View>
+      </ScrollView>
+    </View>
   );
 };
 
